@@ -2,13 +2,22 @@
 from __future__ import division
 import time
 from flask.ext.restful import Resource
-from flask import request, make_response
+from flask import request, make_response, session
 
 from application import app, api
+
+def sumSessionCounter():
+    try:
+        session['counter'] += 1
+    except KeyError:
+        session['counter'] = 1
+    print 'counter: %s' % (session['counter'])
+
 
 @api.resource('/demo', endpoint='demo-a')
 class Demo(Resource):
     def get(self):
+        sumSessionCounter()
         return {
             'msg': 'succeed',
             'code': '0',
@@ -37,6 +46,7 @@ class Error(Resource):
         return {
           'msg': 'error'
         }, 404
+
 #變量規則： http://www.pythondoc.com/flask/quickstart.html#id5
 api.add_resource(DemoB, '/demoB/<user>', endpoint='demo-b')
 api.add_resource(GetCookie, '/cookie', endpoint='cookie')

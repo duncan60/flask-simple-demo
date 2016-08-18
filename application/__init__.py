@@ -1,11 +1,14 @@
 # -*- coding: utf-8 -*-
 import json
-from flask import Flask, url_for, redirect
-from flask.ext import restful
-from flask.ext.restful import Resource
+from flask import Flask, url_for, redirect, session
 from flask import make_response, render_template
 
-app = Flask(__name__)
+from flask.ext import restful
+from flask.ext.restful import Resource
+
+app = Flask(__name__, instance_relative_config=True)
+app.config.from_object('config')
+app.config.from_pyfile('config.py')
 api = restful.Api(app)
 
 @api.representation('application/json')
