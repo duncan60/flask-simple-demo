@@ -28,6 +28,7 @@ $ python run.py
  - /cookie
 
 ## Learning points
+
 ### 增加 RESTful API Resource方式
 
 ``` python
