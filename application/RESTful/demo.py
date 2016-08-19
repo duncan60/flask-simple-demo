@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-from __future__ import division
 import time
 from flask.ext.restful import Resource
 from flask import request, make_response, session
@@ -11,7 +10,7 @@ def sumSessionCounter():
         session['counter'] += 1
     except KeyError:
         session['counter'] = 1
-    print 'counter: %s' % (session['counter'])
+    print ('counter: {0}'.format(session['counter']))
 
 
 @api.resource('/demo', endpoint='demo-a')
@@ -25,7 +24,6 @@ class Demo(Resource):
         }, 200
 
 class DemoB(Resource):
-    # cookies: http://www.pythondoc.com/flask/quickstart.html#cookies
     def get(self, user):
         resp = make_response('add cookies')
         resp.set_cookie(key='username', value=user, expires=time.time()+6*60)

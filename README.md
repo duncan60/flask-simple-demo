@@ -29,6 +29,24 @@ $ python run.py
 
 ## Learning points
 
+### 使用 pyenv 建立不同版本開發環境
+
+ - [用pyenv和virtualenv搭建python虚拟环境](http://www.tiny-coder.com/home-article-51.html)
+ - install failed 的處理：[pyenv/issues/454](https://github.com/yyuu/pyenv/issues/454)
+ - [command Reference](https://github.com/yyuu/pyenv/blob/master/COMMANDS.md)
+
+### 基本配置
+
+ - [變量配置](https://spacewander.github.io/explore-flask-zh/5-configuration.html)
+ - [Flask生成SECRET_KEY（密钥）的一种简单方法](http://flask123.sinaapp.com/article/41/)
+
+### session
+ - [flask session](http://www.pythondoc.com/flask/quickstart.html#sessions)
+ - [Using sessions in Flask](http://code.runnable.com/Uhf58hcCo9RSAACs/using-sessions-in-flask-for-python)
+
+### coolkie
+ - [flask cookies](http://www.pythondoc.com/flask/quickstart.html#cookies)
+
 ### 增加 RESTful API Resource方式
 
 ``` python
