@@ -32,4 +32,4 @@ def after_request(response):
   return response
 
 
-from application.RESTful import demo, error, login
+from application.RESTful import demo, error, login, logout

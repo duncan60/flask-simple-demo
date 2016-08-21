@@ -1,6 +1,9 @@
-from flask import abort, g,request, make_response
+# -*- coding: utf-8 -*-
+from flask import abort, g,request
+
 from flask.ext.restful import Resource, reqparse
 from flask.ext.login import login_user, current_user, UserMixin, user_login_confirmed
+
 from application import app, api, login_manager
 from application.RESTful.error import InvalidUsage
 
@@ -12,14 +15,14 @@ def before_request():
     g.user = current_user
 
 @login_manager.user_loader
-def user_loader(id):
+def user_loader(userId):
     user = User()
-    user.id = id
+    user.id = userId
     return user
 
 @login_manager.unauthorized_handler
 def unauthorized():
-    return {'msg': 'you need login required'}, 401
+    raise InvalidUsage('you need login required', status_code=401)
 
 class Login(Resource):
     def __init__(self):
@@ -35,42 +38,31 @@ class Login(Resource):
 
         if g.user.is_authenticated:
             return {
-                'msg'  : 'alerady login',
-                'token': request.cookies.get(app.config['REMEMBER_COOKIE_NAME'])
+                'message': 'alerady login',
+                'token'  : request.cookies.get(app.config['REMEMBER_COOKIE_NAME'])
             }, 201
 
         try:
             #check user account
-            # find_user = mongo.db.user.find_one(
-            #     {
-            #         'name'    : args['name'],
-            #         'password': args['password']
-            #     }
-            # )
-            pass
+            find_user = {
+                'name'    : args['name'],
+                'password': args['password'],
+                '_id'     : '1234'
+            }
         except:
-            return {'msg': 'DB Error'}, 500
+            return {'message': 'DB Error'}, 500
 
         if not find_user:
-            msg = 'name or passowrd error'
-            return {'msg': 'name or passowrd error'}, 201
+            return {'message': 'name or passowrd error'}, 201
         else:
             user = User()
             user.id = find_user['_id']
             login_user(user, remember=True)
             token = request.cookies.get(app.config['REMEMBER_COOKIE_NAME'])
             # update user
-            # mongo.db.user.find_one_and_update(
-            #     {'_id': user.id},
-            #     {'$set': {
-            #                 'date_latest_login': datetime.utcnow(),
-            #                 'token'            : token
-            #             }
-            #     }
-            # )
             return {
-                'msg'  : 'login success',
-                'token': token
+                'message': 'login success',
+                'token'  : token
             }, 201
 
 api.add_resource(Login, '/login', endpoint = 'login')
