@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from flask import abort, g,request
+from flask import abort, g, request
 
 from flask.ext.restful import Resource, reqparse
 from flask.ext.login import login_user, current_user, UserMixin, user_login_confirmed

@@ -72,6 +72,7 @@ $ python run.py
 
 ### login and logout
  - [flask-login](http://www.pythondoc.com/flask-login/index.html)
+ - [如何使用 Flask-Login](http://jaychung.tw/2015/02/23/how-to-apply-flask-login/)
 
 ### 增加 RESTful API Resource方式
 
