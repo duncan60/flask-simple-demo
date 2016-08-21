@@ -21,16 +21,17 @@ $ pyenv local [virtualenv name]
 run server
 ```
 $ . env/bin/activate
+# if had setting pyenv local, can pass '. env/bin/activate' command
 $ python run.py
 
 # open this url in your browser
 # http://127.0.0.1:5000/
 ```
 
-### Demo Resource
+### API Resource
 
  - /demo
- - /demoB/<user>
+ - /demoB/[username]
  - /cookie
 
 ## Learning points
