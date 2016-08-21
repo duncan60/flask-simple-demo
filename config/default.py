@@ -1,2 +1,3 @@
 DEBUG = True
 THREADED = True
+TRAP_HTTP_EXCEPTIONS = True

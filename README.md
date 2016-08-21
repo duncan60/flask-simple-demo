@@ -46,6 +46,7 @@ $ python run.py
 
  - [變量配置](https://spacewander.github.io/explore-flask-zh/5-configuration.html)
  - [Flask生成SECRET_KEY（密钥）的一种简单方法](http://flask123.sinaapp.com/article/41/)
+ - [Flask-Script参考手册](https://github.com/nummy/flask-script-cn)
 
 ### session
  - [flask session](http://www.pythondoc.com/flask/quickstart.html#sessions)
@@ -53,6 +54,11 @@ $ python run.py
 
 ### coolkie
  - [flask cookies](http://www.pythondoc.com/flask/quickstart.html#cookies)
+
+### output requirements.txt
+```python
+$ pip freeze > requirements.txt
+```
 
 ### 增加 RESTful API Resource方式
 

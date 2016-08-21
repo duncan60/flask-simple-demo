@@ -18,7 +18,7 @@ class Demo(Resource):
     def get(self):
         sumSessionCounter()
         return {
-            'msg': 'succeed',
+            'message': 'succeed',
             'code': '0',
             'result': 'demo source'
         }, 200
@@ -32,20 +32,15 @@ class DemoB(Resource):
 class GetCookie(Resource):
     def get(self):
         return {
-            'msg' : 'succeed',
+            'message' : 'succeed',
             'code': '0',
             'result': {
                 'cookie_username': request.cookies.get('username')
             }
         }, 200
 
-class Error(Resource):
-    def get(self):
-        return {
-          'msg': 'error'
-        }, 404
+
 
 #變量規則： http://www.pythondoc.com/flask/quickstart.html#id5
 api.add_resource(DemoB, '/demoB/<user>', endpoint='demo-b')
 api.add_resource(GetCookie, '/cookie', endpoint='cookie')
-api.add_resource(Error, '/error', endpoint='error-resource')

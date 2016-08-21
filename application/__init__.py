@@ -1,16 +1,20 @@
 # -*- coding: utf-8 -*-
 import json
-from flask import Flask, url_for, redirect, session
+from flask import Flask
 from flask import make_response, render_template
 
 from flask.ext import restful
 from flask.ext.restful import Resource
+from flask.ext.login import LoginManager
 
 app = Flask(__name__, instance_relative_config=True)
 
 app.config.from_object('config.default')
 app.config.from_pyfile('config.py')
 app.config.from_envvar('APP_CONFIG_FILE')
+
+login_manager = LoginManager()
+login_manager.init_app(app)
 
 api = restful.Api(app)
 
@@ -27,9 +31,5 @@ def after_request(response):
   response.headers.add('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE')
   return response
 
-@app.errorhandler(404)
-def resource_not_found(error):
-   return redirect(url_for('error-resource'))
 
-
-from application.RESTful import demo
+from application.RESTful import demo, error, login
