@@ -1,7 +1,4 @@
 #!flask/bin/python
-import os
-basedir = os.path.abspath(os.path.dirname(__file__))
-
 from application import app
 app.run(threaded=True)
 #http://www.pythondoc.com/flask/api.html#flask.Flask.run
