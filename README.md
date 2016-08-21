@@ -33,6 +33,8 @@ $ python run.py
  - /demo
  - /demoB/[username]
  - /cookie
+ - /login
+ - /logout
 
 ## Learning points
 
@@ -48,6 +50,11 @@ $ python run.py
  - [Flask生成SECRET_KEY（密钥）的一种简单方法](http://flask123.sinaapp.com/article/41/)
  - [Flask-Script参考手册](https://github.com/nummy/flask-script-cn)
 
+### output requirements.txt
+ ```python
+ $ pip freeze > requirements.txt
+ ```
+
 ### session
  - [flask session](http://www.pythondoc.com/flask/quickstart.html#sessions)
  - [Using sessions in Flask](http://code.runnable.com/Uhf58hcCo9RSAACs/using-sessions-in-flask-for-python)
@@ -55,10 +62,11 @@ $ python run.py
 ### coolkie
  - [flask cookies](http://www.pythondoc.com/flask/quickstart.html#cookies)
 
-### output requirements.txt
-```python
-$ pip freeze > requirements.txt
-```
+### error handler
+ - [Implementing API Exceptions](http://flask.pocoo.org/docs/0.11/patterns/apierrors/)
+
+### login and logout
+ - [flask-login](http://www.pythondoc.com/flask-login/index.html)
 
 ### 增加 RESTful API Resource方式
 
