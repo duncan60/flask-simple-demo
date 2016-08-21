@@ -14,6 +14,11 @@ $ . env/bin/activate
 $ pyenv virtualenv [python version] [virtualenv name]
 $ pyenv local [virtualenv name]
 (virtualenv name) $ pip install -r requirements.txt
+
+# create instance/config.py, set value
+ESSION_COOKIE_NAME = 'yourapplication'
+REMEMBER_COOKIE_NAME = 'yourapplication'
+SECRET_KEY = 'yoursecretkey'
 ```
 
 ## Start to development and running server
