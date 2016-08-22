@@ -23,7 +23,6 @@ SECRET_KEY = 'yoursecretkey'
 
 ## Start to development and running server
 
-run server
 ```
 $ . env/bin/activate
 # if had setting pyenv local, can pass '. env/bin/activate' command
@@ -63,7 +62,7 @@ $ python test.py --cov-report=term --cov-report=html --cov=application/ test/
  - [Flask-Script参考手册](https://github.com/nummy/flask-script-cn)
 
 ### output requirements.txt
- ```python
+ ```
  $ pip freeze > requirements.txt
  ```
 
