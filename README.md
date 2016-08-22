@@ -61,18 +61,27 @@ $ python run.py
  ```
 
 ### session
+
  - [flask session](http://www.pythondoc.com/flask/quickstart.html#sessions)
  - [Using sessions in Flask](http://code.runnable.com/Uhf58hcCo9RSAACs/using-sessions-in-flask-for-python)
 
 ### coolkie
+
  - [flask cookies](http://www.pythondoc.com/flask/quickstart.html#cookies)
 
 ### error handler
+
  - [Implementing API Exceptions](http://flask.pocoo.org/docs/0.11/patterns/apierrors/)
 
 ### login and logout
+
  - [flask-login](http://www.pythondoc.com/flask-login/index.html)
  - [如何使用 Flask-Login](http://jaychung.tw/2015/02/23/how-to-apply-flask-login/)
+
+### unittest
+
+ - [pytest](http://doc.pytest.org/en/latest/contents.html)
+ - [Python单元测试框架之pytest -- fixtures](http://www.cnblogs.com/fnng/p/4769020.html)
 
 ### 增加 RESTful API Resource方式
 
