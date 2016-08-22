@@ -16,7 +16,7 @@ $ pyenv local [virtualenv name]
 (virtualenv name) $ pip install -r requirements.txt
 
 # create instance/config.py, set value
-ESSION_COOKIE_NAME = 'yourapplication'
+SESSION_COOKIE_NAME = 'yourapplication'
 REMEMBER_COOKIE_NAME = 'yourapplication'
 SECRET_KEY = 'yoursecretkey'
 ```
