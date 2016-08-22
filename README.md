@@ -32,6 +32,13 @@ $ python run.py
 # open this url in your browser
 # http://127.0.0.1:5000/
 ```
+## Run testing
+
+```
+$ python test.py --cov-report=term  --cov=application/ test/
+# or output testing report
+$ python test.py --cov-report=term --cov-report=html --cov=application/ test/
+```
 
 ### API Resource
 
@@ -82,6 +89,8 @@ $ python run.py
 
  - [pytest](http://doc.pytest.org/en/latest/contents.html)
  - [Python单元测试框架之pytest -- fixtures](http://www.cnblogs.com/fnng/p/4769020.html)
+ - [沒學會 fixtures 不要說會用 pytest – Part II](http://www.techurtime.com/pytest_fixtures_part2/)
+ - [pytest fixture](http://senarukana.github.io/2015/05/29/pytest-fixture/)
 
 ### 增加 RESTful API Resource方式
 
