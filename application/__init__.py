@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 import json
-from flask import Flask
-from flask import make_response, render_template
+from flask import Flask, make_response, render_template
 
 from flask.ext import restful
 from flask.ext.restful import Resource
 from flask.ext.login import LoginManager
+from flask_socketio import SocketIO
 
 app = Flask(__name__, instance_relative_config=True)
 
@@ -15,6 +15,8 @@ app.config.from_envvar('APP_CONFIG_FILE')
 
 login_manager = LoginManager()
 login_manager.init_app(app)
+
+socketio = SocketIO(app)
 
 api = restful.Api(app)
 
@@ -32,4 +34,9 @@ def after_request(response):
   return response
 
 
-from application.RESTful import demo, error, login, logout
+@app.route('/')
+def index():
+    return render_template('index.html', async_mode=socketio.async_mode)
+
+from application.resource import demo, error, login, logout
+from application.socket import simple

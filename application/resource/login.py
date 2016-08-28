@@ -5,7 +5,7 @@ from flask.ext.restful import Resource, reqparse
 from flask.ext.login import login_user, current_user, UserMixin, user_login_confirmed
 
 from application import app, api, login_manager
-from application.RESTful.error import InvalidUsage
+from application.resource.error import InvalidUsage
 
 class User(UserMixin):
     pass
