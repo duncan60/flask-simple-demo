@@ -102,3 +102,5 @@ class Demo(Resource):
 api.add_resource(Demo, '/api-path')
 
 ```
+###
+- [Install and Configure the Atom Editor for Python](http://www.marinamele.com/install-and-configure-atom-editor-for-python)
