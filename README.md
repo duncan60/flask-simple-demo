@@ -106,4 +106,5 @@ api.add_resource(Demo, '/api-path')
 ```
 ### linter for flaske8
 - [Install and Configure the Atom Editor for Python](http://www.marinamele.com/install-and-configure-atom-editor-for-python)
+
 設定：Preference > Package > Setting lint-flake8 > Ignore Error Code: E999
