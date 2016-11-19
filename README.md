@@ -84,7 +84,7 @@ $ python test.py --cov-report=term --cov-report=html --cov=application/ test/
 ### login and logout
 
  - [flask-login](http://www.pythondoc.com/flask-login/index.html)
- - [如何使用 Flask-Login](http://jaychung.tw/2015/02/23/how-to-apply-flask-login/)
+ - [使用 Flask-Login 注册登录](https://luke0922.gitbooks.io/the-way-to-flask/content/chapter005.html)
 
 ### unittest
 
