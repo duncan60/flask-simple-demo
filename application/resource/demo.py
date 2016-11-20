@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 import time
 from flask.ext.restful import Resource
-from flask import request, make_response, session
+from flask import request, make_response, session, g
 
-from application import app, api
+from application import app, api, auth
 
 def sumSessionCounter():
     try:
@@ -13,21 +13,19 @@ def sumSessionCounter():
     print ('counter: {0}'.format(session['counter']))
 
 
-@api.resource('/demo', endpoint='demo-a')
-class Demo(Resource):
-    def get(self):
-        sumSessionCounter()
-        return {
-            'message': 'succeed',
-            'code': '0',
-            'result': 'demo source'
-        }, 200
+@app.route('/demo')
+@auth.login_required
+def Demo():
+    sumSessionCounter()
+    return "this is user name:, %s!" % g.user['name']
+
 
 class DemoB(Resource):
     def get(self, user):
         resp = make_response('add cookies')
         resp.set_cookie(key='username', value=user, expires=time.time()+6*60)
         return resp
+
 
 class GetCookie(Resource):
     def get(self):
