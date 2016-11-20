@@ -86,6 +86,11 @@ $ python test.py --cov-report=term --cov-report=html --cov=application/ test/
  - [flask-login](http://www.pythondoc.com/flask-login/index.html)
  - [使用 Flask-Login 注册登录](https://luke0922.gitbooks.io/the-way-to-flask/content/chapter005.html)
 
+### Authorization
+
+- [flask-HTTPAuth](http://flask-httpauth.readthedocs.io/en/latest/)
+- [使用Flask设计带认证token的RESTful API接口](http://www.cnblogs.com/vovlie/p/4182814.html)
+
 ### unittest
 
  - [pytest](http://doc.pytest.org/en/latest/contents.html)
