@@ -52,7 +52,6 @@ $ python test.py --cov-report=term --cov-report=html --cov=application/ test/
 
 ### 使用 pyenv 建立不同版本開發環境
 
- - [用pyenv和virtualenv搭建python虚拟环境](https://zhuanlan.zhihu.com/p/22147581)
  - [使用 Pyenv 管理多個 Python 版本](http://blog.codylab.com/python-pyenv-management/)
  - install failed 的處理：[pyenv/issues/454](https://github.com/yyuu/pyenv/issues/454)
  - [command Reference](https://github.com/yyuu/pyenv/blob/master/COMMANDS.md)
